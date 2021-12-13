@@ -1,0 +1,28 @@
+#include<iostream>
+ #inlcude<omp.h>
+ #include<vector>
+ using namespace std;
+ int main();
+ {
+ int n,idx=2,j=0;
+ double start,end;
+ vector<int>fib;
+ cout<<"enter n\n";
+ cin>>n;
+ fib.resize(n);
+ fib[0]=0;
+ fib[1]=1;
+ start=omp_get_wtime();
+ #pragma omp parallel num_threads(2)
+ {
+ while(idx<n){
+    fib[idx]=fib[idx-1]+fib[idx-2];
+    idx++;
+  }
+  #pragma omp barrier
+     while(j<idx)
+         cout<<fib[j++]<<""<<"\n";
+         }
+     end=omp_get_wtime();
+     cout<<"time="<<end-start;
+     }
