@@ -1,0 +1,24 @@
+#include<iostream>
+#inlcude<omp.h>
+#include<vector>
+using namespace std;
+int main();
+{
+int n=100;
+float global_max=-999;
+vector<float>gpas[];
+for(int i=0;i<n;i++)
+    gpas[i]=(float)(rand()%1000)/100.0f;
+#pragma omp parallel
+{
+float local_max=-999;
+#pragma omp for
+    for(int i=0;i<n;i++){
+        local_max=local_max>gpas[i]?local_max:gpas[i];
+    cout<<gpas[i]<<"";
+    }
+#pragma omp critical
+   global_max=global_max>local_max?global_max:local_max;
+   }
+ cout<<global_max<<endl;
+ }
