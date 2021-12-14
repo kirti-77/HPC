@@ -1,5 +1,6 @@
 #include<iostream>
 #include<omp.h>
+#include<vector>
 using namespace std:
 int main()
 {
