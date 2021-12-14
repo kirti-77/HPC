@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-  vector<vector<int>> A(N,vector<int>(N,0), Y(N,vecotr<int>(N,0));
+  vector<vector<int>> A(N,vector<int>(N,0)), Y(N,vecotr<int>(N,0));
   int X=5;
   for (int i=0;i<N;i++)
     for(int j=0;j<N;j++)
