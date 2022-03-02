@@ -1,8 +1,8 @@
 #include<iostream>
- #inlcude<omp.h>
+ #include<omp.h>
  #include<vector>
  using namespace std;
- int main();
+ int main()
  {
  int n,idx=2,j=0;
  double start,end;
