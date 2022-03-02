@@ -1,9 +1,9 @@
 #include<iostream>
- #inlcude<omp.h>
+ #include<omp.h>
  #include<vector>
 #include<stdlib.h>
  using namespace std;
- int main();
+ int main()
  {
  int n=100;
  float global_max=-999;
