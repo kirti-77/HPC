@@ -4,7 +4,8 @@
 using namespace std;
 int main()
 {
-  vector<vector<int>> A(N,vector<int>(N,0)), Y(N,vecotr<int>(N,0));
+  int N=100;
+  vector<vector<int>> A(N,vector<int>(N,0)), Y(N,vector<int>(N,0));
   int X=5;
   for (int i=0;i<N;i++)
     for(int j=0;j<N;j++)
@@ -14,7 +15,7 @@ int main()
  #pragma omp parallel for
      for(int i=0;i<N;i++)
       for(int j=0;j<N;j++)
-        Y[i][j]=A[i][j] * X
+        Y[i][j]=A[i][j] * X;
      end = omp_get_wtime();
      cout<<"time="<<end-start;
                         }
