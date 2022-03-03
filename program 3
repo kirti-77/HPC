@@ -20,9 +20,9 @@
  if(id==0)
     nthreads=nt;
   sum[id]=0.0;
-  for(i=id;i<num_step;i+=nt)
+  for(i=id;i<num_steps;i+=nt)
   {
-      x=(i+0.5)*steps;
+      x=(i+0.5)*step;
       sum[id]+=4.0/(1.0+x*x);
       }
       }
