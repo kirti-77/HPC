@@ -20,7 +20,7 @@
  if(id==0)
     nthreads=nt;
   sum[id]=0.0;
-  for(i=id;i<num_steps;i+=nt)
+  for(i=id;i<num_step;i+=nt)
   {
       x=(i+0.5)*steps;
       sum[id]+=4.0/(1.0+x*x);
@@ -28,7 +28,7 @@
       }
    for(i=0;i<nthreads;i++)
    {
-       pi+=sum[i]*steps;
+       pi+=sum[i]*step;
     }
     end=omp_get_wtime();
     cout<<"pi="<<pi<<endl;
